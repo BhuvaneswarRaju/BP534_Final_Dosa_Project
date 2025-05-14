@@ -1,7 +1,7 @@
 import sqlite3
 import json
 
-# Connect to SQLite database (creates db.sqlite if it doesn't exist)
+# This connects to SQLite database (creates db.sqlite if it doesn't exist)
 conn = sqlite3.connect("db.sqlite")
 cur = conn.cursor()
 
