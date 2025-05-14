@@ -6,7 +6,6 @@ import time
 
 app = FastAPI()
 
-# Safe connection function
 def get_db():
     return sqlite3.connect("db.sqlite", check_same_thread=False)
 
@@ -24,7 +23,7 @@ class Order(BaseModel):
     customer_id: int
     notes: str
 
-# --------- Item Endpoints ---------
+# ------- Item Endpoints -------
 
 @app.post("/items")
 def add_item(item: Item):
@@ -69,7 +68,7 @@ def remove_item(item_id: int):
     db.close()
     return {"message": f"Item {item_id} deleted"}
 
-# --------- Customer Endpoints ---------
+# ------- Customer Endpoints -------
 
 @app.post("/customer")
 def insert_customer(customer: Customer):
@@ -115,7 +114,7 @@ def drop_customer(customer_id: int):
     db.close()
     return {"message": "Customer deleted successfully"}
 
-# --------- Order Endpoints ---------
+# ------- Order Endpoints -------
 
 @app.post("/orders/{order_id}")
 def create_order(order: Order):
