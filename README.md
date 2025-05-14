@@ -32,11 +32,11 @@ cd Final_Project_Dosa_API
 ```bash
 python -m venv venv
 ```
-# For Windows:
+For Windows:
 ```bash
 venv\Scripts\activate
 ```
-# For macOS/Linux:
+For macOS/Linux:
 ```bash
 source venv/bin/activate
 ```
